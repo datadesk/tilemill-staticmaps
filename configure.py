@@ -1,11 +1,4 @@
 #! /usr/bin/python
-# For postgres layers mapnik by default will query postgis for the
-# extent to know whether to process the layer during rendering
-# Increase performance if you are only rendering a particular area by
-# specifying a bounding box in the format of "XMIN,YMIN,XMAX,YMAX" in the
-# same units as the database (probably spherical mercator meters). The
-# whole world is "-20037508.34,-20037508.34,20037508.34,20037508.34".
-extent = "-13849828.38,3833234.22,-12705175.77,5162381.7"
 
 # if you have > 2GB mem, turn this on for slightly faster rendering
 feat_caching = True

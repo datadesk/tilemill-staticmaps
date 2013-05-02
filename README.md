@@ -3,7 +3,7 @@ Given an existing tilemill project and a point, this will generate a simple loca
 Example usage:
 
 ```bash
- ./export.py quiet-la test.png -118.48857 34.023926 0.5 0.5 --width=300 --height=300
+ ./export.py quiet-la test.png -118.48857 34.023926 0.5 --width=300 --height=300
 ```
 Output:
 

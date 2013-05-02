@@ -3,10 +3,6 @@
 # if you have > 2GB mem, turn this on for slightly faster rendering
 feat_caching = True
 
-#
-# Don't touch this part down here, just run it.
-#
-
 import os
 import math
 import json
@@ -84,6 +80,7 @@ def doit(project_mml, lon, lat):
             layer["properties"]["cache-features"] = "true"
       #Drop the new single-point MML in.
       newf["Layer"].append(prep_mml_layer(lon, lat))
+      # Link our default point stylesheet
       newf["Stylesheet"].append("staticmap-dynamic.mss")
       f.write(json.dumps(newf, sort_keys=True, indent=2))
     f.closed

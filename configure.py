@@ -14,12 +14,10 @@ default = os.path.join(home, 'Documents', 'MapBox')
 project_dir = os.path.join(os.environ.get('TILEMILL_PROJECTS', default), 'project')
 tmp_location = "/tmp/staticmap_geojson.json"
 
-def get_bounding_box(longitude_in_degrees, latitude_in_degrees, half_side_in_miles, half_height_in_miles=None):
-    if not half_height_in_miles:
-        half_height_in_miles = half_side_in_miles
+def get_bounding_box(longitude_in_degrees, latitude_in_degrees, half_side_in_miles):
 
     half_side_in_km = half_side_in_miles * 1.609344
-    half_height_in_km = half_height_in_miles * 1.609344
+    half_side_in_km = half_side_in_miles * 1.609344
     lat = math.radians(latitude_in_degrees)
     lon = math.radians(longitude_in_degrees)
 
@@ -27,8 +25,8 @@ def get_bounding_box(longitude_in_degrees, latitude_in_degrees, half_side_in_mil
     # Radius of the parallel at given latitude
     parallel_radius = radius*math.cos(lat)
 
-    lat_min = lat - half_height_in_km/radius
-    lat_max = lat + half_height_in_km/radius
+    lat_min = lat - half_side_in_km/radius
+    lat_max = lat + half_side_in_km/radius
     lon_min = lon - half_side_in_km/parallel_radius
     lon_max = lon + half_side_in_km/parallel_radius
     rad2deg = math.degrees

@@ -7,5 +7,5 @@ Example usage:
 ```
 Output:
 
-![SaMo](https://raw.github.com/datadesk/tilemill-staticmaps/master/samples/test.png)
+![SaMo](https://github.com/datadesk/tilemill-staticmaps/blob/master/samples/test.png?raw=true)
 

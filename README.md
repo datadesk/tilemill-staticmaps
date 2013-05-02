@@ -4,7 +4,7 @@ Example usage:
 
 ```bash
  ./export.py quiet-la test.png -118.48857 34.023926 0.5 0.5 --width=300 --height=300
-
+```
 Output:
 
 ![SaMo](https://raw.github.com/datadesk/tilemill-staticmaps/master/samples/samo.png)

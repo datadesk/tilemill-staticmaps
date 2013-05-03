@@ -9,3 +9,5 @@ Output:
 
 ![SaMo](https://github.com/datadesk/tilemill-staticmaps/blob/master/samples/test.png?raw=true)
 
+Currently there's no way to change the marker's look besides jumping into project-name_staticmaps/staticmap-dynamic.mss and changing the styles there.
+

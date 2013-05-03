@@ -15,8 +15,12 @@ project_dir = os.path.join(os.environ.get('TILEMILL_PROJECTS', default), 'projec
 tmp_location = "/tmp/staticmap_geojson.json"
 
 def get_bounding_box(longitude_in_degrees, latitude_in_degrees, half_side_in_miles):
+    """
+    Given lon/lat, return a bbox ready for tilemill.
 
-    half_side_in_km = half_side_in_miles * 1.609344
+    Taken from:
+    http://stackoverflow.com/questions/1648917/given-a-latitude-and-longitude-and-distance-i-want-to-find-a-bounding-box
+    """
     half_side_in_km = half_side_in_miles * 1.609344
     lat = math.radians(latitude_in_degrees)
     lon = math.radians(longitude_in_degrees)
